@@ -1,0 +1,25 @@
+1. Create chef_server and chef_node servers in vultr
+2. Enter the IP of the chef_server and chef_node and chef_workstation in all the three hosts file
+chef_server======================
+3.Install git in chef_server
+4. git clone chef_server_node_workstation installation
+4.give execute permission to chef_server_install .sh
+5. Run chef_server_install.sh with 5 parameters . Press any key and press q to goto end of license agreement and  accept the license 'yes'
+6.launh chef management console from browser http://chef_server IP . Login with username created in 5 step.Create quadralogics organisation  
+chef_workstation=====================
+7.In chef_workstation chef generate generator @ chef-starter/chef-repo ->anju login
+8.create /.chef/config.rb and include chefdk.generator_cookbook "/home/anju/Apps/chef-starter/chef-repo/code_generator"  -> not done
+9.goto code_generator in visual studio and change kitchen.yml, - change the templates/kitchen.yml.erb
+templates/.kitchen.yml_erb > test/smoke/default
+recipes/cookbook.rb -> smoke
+recipes/recipe.rb -> smoke
+10.in chef-repo/cookbooks create cookbook nginx
+chef generate cookbook nginx
+11.in chef-repo knife ssl fetch
+12 knife bootstrap $1 -x $2 -P $3 -N $4 --sudo from chef-repo
+13 knife upload cookbooks ./cookbooks/nginx from chef-repo
+chef_server=======================
+14 Add run list for the node from chef management console
+chef_node=========================
+15 sudo chef-client
+ 
