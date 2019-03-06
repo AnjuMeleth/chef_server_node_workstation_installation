@@ -20,6 +20,6 @@ chef generate cookbook nginx -g ../code_generator
 13 knife upload cookbooks ./cookbooks/nginx from chef-repo
 chef_server=======================
 14 Add run list for the node from chef management console
-chef_node=========================
+chef_node===================================
 15 sudo chef-client
  16 avoid the fire wall firewall-cmd --zone=public --add-service=http
