@@ -14,7 +14,7 @@ templates/.kitchen.yml_erb > test/smoke/default
 recipes/cookbook.rb -> smoke
 recipes/recipe.rb -> smoke
 10.in chef-repo/cookbooks create cookbook nginx
-chef generate cookbook nginx
+chef generate cookbook nginx -g ../code_generator
 11.in chef-repo knife ssl fetch
 12 knife bootstrap $1 -x $2 -P $3 -N $4 --sudo from chef-repo
 13 knife upload cookbooks ./cookbooks/nginx from chef-repo
@@ -22,4 +22,4 @@ chef_server=======================
 14 Add run list for the node from chef management console
 chef_node=========================
 15 sudo chef-client
- 
+ 16 avoid the fire wall firewall-cmd --zone=public --add-service=http
