@@ -4,4 +4,4 @@ sudo apt update
 sudo apt install git
 git --version
 # Run the chef_server_install in chef_server
-#Include the chef_server and chef_node IP in all hosts file /etc/hosts
+# Include the chef_server and chef_node IP in all hosts file /etc/hosts in root user
