@@ -14,3 +14,6 @@ Download the starter kit to chef_workstation
 # in chef_workstation
 chef generate generator at chef-starter/chef-repo
 In chef-repo at /.chef/cofig.rb include line chefdk.generator_cookbook "path/code_generator" 
+chef generate cookbook nginx -g ../code_generator at cookbooks
+knife ssl fetch @chef-repo [if config.rb present then knife.rb is not checked hence throwing error]
+knife bootstrap $1(IP) -x $2(user) '-P(passwd)' $3 -N $4(chef_node) --sudo @ chef-repo
