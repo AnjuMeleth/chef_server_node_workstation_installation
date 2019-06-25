@@ -12,3 +12,17 @@ sudo systemctl enable docker
 sudo docker run hello-world
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+
+
+
+sudo apt-get update
+sudo apt-get install git
+curl -L https://www.opscode.com/chef/install.sh | sudo bash
+cd ~
+git clone https://github.com/opscode/chef-repo.git
+mkdir -p ~/chef-repo/.chef
+git config --global user.name ""
+git config --global user.email ""
+echo 'export PATH="/opt/chef/embedded/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
